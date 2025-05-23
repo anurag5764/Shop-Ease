@@ -1,4 +1,4 @@
-const userModels = require("../models/userModels");
+const userModels = require("../../models/userModels");
 
 async function allusers(req, res) {
   try {
@@ -10,7 +10,7 @@ async function allusers(req, res) {
       error: false,
     });
   } catch (err) {
-    resizeBy.json({
+    res.json({
       message: err.message || err,
       error: true,
       success: false,

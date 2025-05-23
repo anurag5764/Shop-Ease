@@ -3,7 +3,7 @@ async function authToken(req, res, next) {
   try {
     const attoken = req.cookies?.token;
     if (!attoken) {
-      res.json({
+      return res.json({
         message: "User not Login",
         error: true,
         success: false,
